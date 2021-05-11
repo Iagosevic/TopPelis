@@ -1,0 +1,46 @@
+application: proyecto
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /
+  script: handlers.main.app
+  login: required
+
+- url: /peliculas/nueva
+  script: handlers.peliculas.nueva.app
+
+- url: /peliculas/eliminar
+  script: handlers.peliculas.eliminar.app
+
+- url: /peliculas/edit
+  script: handlers.peliculas.edit.app
+
+- url: /peliculas/showcurrent
+  script: handlers.peliculas.showcurrent.app
+
+- url: /comentarios/showall
+  script: handlers.comentarios.showall.app
+
+- url: /comentarios/add
+  script: handlers.comentarios.add.app
+
+- url: /templates
+  static_dir: templates
+  application_readable: true
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: "latest"
+
+- name: PIL
+  version: "latest"
