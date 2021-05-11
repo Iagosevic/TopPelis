@@ -1,0 +1,38 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+<script>
+        function check(){
+            if(formNuevaPelicula.edTitulo.value.length == 0){
+                alert("Titulo a 0");
+                return false;
+            }
+        }
+
+    </script>
+
+
+    <form id="Form" class="Form" method="post" action="/peliculas/nueva" enctype="multipart/form-data" onsubmit="return check()">
+        <legend>Añadir pelicula</legend>
+        <p><b><label for="edTitulo">Titulo</label></b>
+        <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="20"/></p>
+        <br><br>
+        <p><b><label for="edAnho">Año</label></b>
+        <input type="number" id="edAnho" name="edAnho" min="1895" max="2021" placeholder="Ingresa el año" required /></p>
+        <br><br>
+        <p><b><label for="edPais">Pais</label></b>
+        <input type="text" id="edPais" name="edPais" placeholder="Ingresa el pais" required /></p>
+        <br><br>
+        <p><b><label for="edDirector">Director</label></b>
+        <input type="text" id="edDirector" name="edDirector" placeholder="Ingresa el director" required /></p>
+        <br><br>
+        <p><b><label for="edResumen">Resumen</label></b>
+        <textarea id="edResumen" name="edResumen"
+               rows="7" cols="60" placeholder="Escribe un breve resumen" required></textarea></p>
+
+        <p><b><label for="edPortada">Portada</label></b>
+            <input type="file" name="edPortada" />
+        <br><br>
+        <button type="submit" name="action" value="Añadir" class="anadir">Añadir</button>
+    </form>
+{% endblock %}

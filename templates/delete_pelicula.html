@@ -1,0 +1,24 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+    <h1>Eliminar pelicula {{pelicula.titulo}}</h1>
+    <form id="formNuevaPelicula" method="post" action="/peliculas/nueva" onsubmit="return check()">
+        <p><label for="edTitulo">Titulo</label>
+        <input type="text" id="edTitulo" name="edTitulo" value="{{pelicula.titulo}}" size="20"/></p>
+        <br><br>
+        <p><label for="edAnho">Año</label>
+        <input type="number" id="edAnho" name="edAnho" min="1895" max="2021" value="{{pelicula.anho}}" required /></p>
+        <br><br>
+        <p><label for="edPais">Pais</label>
+        <input type="text" id="edPais" name="edPais" value="{{pelicula.pais}}" required /></p>
+        <br><br>
+        <p><label for="edDirector">Director</label>
+        <input type="text" id="edDirector" name="edDirector" value="{{pelicula.director}}" required /></p>
+        <br><br>
+        <p><label for="edResumen">Resumen</label>
+        <textarea id="edResumen" name="edResumen"
+               rows="7" cols="60" autofocus required>{{pelicula.resumen}}</textarea></p>
+        <input type="submit" value="Eliminar">
+    </form>
+{% endblock %}

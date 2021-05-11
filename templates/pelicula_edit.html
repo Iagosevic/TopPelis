@@ -1,0 +1,30 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+    <form id="Form" class="Form" method="post" action="/peliculas/edit" onsubmit="return check()">
+        <legend>Editar pelicula {{pelicula.titulo}}</legend>
+        <p><b><label for="edTitulo">Titulo</label></b>
+        <input type="text" id="edTitulo" name="edTitulo" title="No puedes modificar el titulo" value="{{pelicula.titulo}}" size="20" readonly/></p>
+        <br><br>
+        <p><b><label for="edAnho">Año</label></b>
+        <input type="number" id="edAnho" name="edAnho" min="1895" max="2021" value="{{pelicula.anho}}" required /></p>
+        <br><br>
+        <p><b><label for="edPais">Pais</label></b>
+        <input type="text" id="edPais" name="edPais" value="{{pelicula.pais}}" required /></p>
+        <br><br>
+        <p><b><label for="edDirector">Director</label></b>
+        <input type="text" id="edDirector" name="edDirector" value="{{pelicula.director}}" required /></p>
+        <br><br>
+        <p><b><label for="edResumen">Resumen</label></b>
+        <textarea id="edResumen" name="edResumen"
+               rows="7" cols="60" autofocus required>{{pelicula.resumen}}</textarea></p>
+
+         <p><b><label for="edPortada">Portada</label></b>
+            <input type="file" name="edPortada" />
+        <br><br>
+        <input type="submit" value="Editar">
+
+
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+      {% if comentarios.count() > 0 %}
+      <ul>
+        <h1>Comentarios sobre {{ pelicula.titulo }}</h1>
+        {% for i in comentarios %}
+
+          <li>Comentario de <b>{{ i.login }}</b></li>
+          <ul><b>{{ i.comentario }}</b></ul>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p><b>No hay comentarios todavia.</b></p>
+      {% endif %}
+
+    <a href="/comentarios/add?id={{ pelicula.key.urlsafe() }}">Añadir comentario</a>
+{% endblock %}

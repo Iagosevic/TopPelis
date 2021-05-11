@@ -1,0 +1,15 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+
+    <form id="Form" class="Form" method="post" action="/comentarios/add?titulo={{titulo}}">
+        <legend>Nuevo comentario sobre {{ pelicula.titulo }}</legend>
+        <p><b><label for="edComentario">Comentario</label></b>
+        <textarea id="edComentario" name="edComentario"
+               rows="7" cols="60" placeholder="Escribe un breve comentario"></textarea></p>
+
+
+        <button type="submit" name="action" value="Añadir" class="anadir">Añadir</button>
+    </form>
+{% endblock %}
