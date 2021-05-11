@@ -1,0 +1,6 @@
+Buscar pelicula
+Editar la foto
+Añadir comentario
+Vista eliminar pelicula para confirmar borrado
+CSS
+Revisar login
