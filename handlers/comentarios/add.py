@@ -26,15 +26,13 @@ class ComentarioAddHandler(webapp2.RequestHandler):
     def post(self):
         #pelicula = Pelicula.recupera(self.request)
         #titulo = self.request.GET["id"]
-        tupla = Comentario.recupera_para(self.request)
-        pelicula = tupla[0]
-        titulo = pelicula.titulo
+        titulo = self.request.GET["id"]
         login = users.get_current_user().nickname()
         comentario = self.request.get("edComentario")
 
         comentario = Comentario(titulo=ndb.Key(urlsafe=titulo), login=login, comentario=comentario)
         comentario.put()
-        time.sleep(1)
+
         return self.redirect("/")
 
 app = webapp2.WSGIApplication([
