@@ -2,14 +2,14 @@
 
 from google.appengine.ext import ndb
 from pelicula import Pelicula
-from usuario import Usuario
 
 class Comentario(ndb.Model):
 
     titulo = ndb.KeyProperty(kind = Pelicula)
     login = ndb.StringProperty(required=True)
     comentario = ndb.StringProperty(required=True)
-
+    fecha_comentario = ndb.DateProperty(auto_now_add = True)
+    hora_comentario = ndb.TimeProperty(auto_now_add=True)
 
     @staticmethod
     def recupera_para(req):
