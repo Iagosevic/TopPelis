@@ -7,7 +7,8 @@
         <h1>Comentarios sobre {{ pelicula.titulo }}</h1>
         {% for i in comentarios %}
 
-          <li>Comentario de <b>{{ i.login }}</b></li>
+          <li>Comentario de <b>{{ i.login }}</b> el {{ i.fecha_comentario.day }}/{{ i.fecha_comentario.month }}/{{ i.fecha_comentario.year }}
+              a las {{ i.hora_comentario.hour }}:{{ i.hora_comentario.minute }}:{{ i.hora_comentario.second }}</li>
           <ul><b>{{ i.comentario }}</b></ul>
         {% endfor %}
       </ul>

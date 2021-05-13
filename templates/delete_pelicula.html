@@ -2,23 +2,50 @@
 
 {% block contenido %}
 
-    <h1>Eliminar pelicula {{pelicula.titulo}}</h1>
-    <form id="formNuevaPelicula" method="post" action="/peliculas/nueva" onsubmit="return check()">
-        <p><label for="edTitulo">Titulo</label>
-        <input type="text" id="edTitulo" name="edTitulo" value="{{pelicula.titulo}}" size="20"/></p>
-        <br><br>
-        <p><label for="edAnho">Año</label>
-        <input type="number" id="edAnho" name="edAnho" min="1895" max="2021" value="{{pelicula.anho}}" required /></p>
-        <br><br>
-        <p><label for="edPais">Pais</label>
-        <input type="text" id="edPais" name="edPais" value="{{pelicula.pais}}" required /></p>
-        <br><br>
-        <p><label for="edDirector">Director</label>
-        <input type="text" id="edDirector" name="edDirector" value="{{pelicula.director}}" required /></p>
-        <br><br>
-        <p><label for="edResumen">Resumen</label>
-        <textarea id="edResumen" name="edResumen"
-               rows="7" cols="60" autofocus required>{{pelicula.resumen}}</textarea></p>
-        <input type="submit" value="Eliminar">
-    </form>
+<form id="FormEliminar" class="FormEliminar" method="post" action="/peliculas/eliminar?id={{pelicula.key.urlsafe()}}">
+    <table class="showU" style="margin-left: 30%;">
+        <tr><th class="title" colspan="4">Eliminar {{pelicula.titulo}}</tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{pelicula.titulo}}</td>
+            </tr>
+            <tr>
+                <th>Año</th>
+                <td>{{pelicula.anho}}</td>
+            </tr>
+            <tr>
+                <th>Pais</th>
+                <td>{{pelicula.pais}}</td>
+            </tr>
+            <tr>
+                <th>Director</th>
+                <td>{{pelicula.director}}</td>
+            </tr>
+            <tr>
+                <th>Resumen</th>
+                <td><textarea readonly>{{pelicula.resumen}}</textarea></td>
+            </tr>
+            {% if pelicula.portada != None %}
+            <tr>
+                <th>Portada</th>
+                <td><img class="portadaShowCurrent" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}"></td>
+            </tr>
+            {% else %}
+            <tr>
+                <th>Portada</th>
+                <td><img class="portadaShowCurrent" src="img/juego.jpg"></td>
+            </tr>
+            {% endif %}
+            <th>
+                <input type="submit" value="Eliminar">
+
+            </th>
+			</table>
+</form>
+
 {% endblock %}
+</head>
+<body>
+
+</body>
+</html>

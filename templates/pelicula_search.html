@@ -1,0 +1,12 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+    <form id="Form" class="Form" method="post" action="/peliculas/search">
+        <legend>Buscar pelicula</legend>
+        <p><b><label for="edTitulo">Titulo</label></b>
+        <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="20"/></p>
+        <br><br>
+        <button type="submit" name="action" value="Buscar" class="anadir">Buscar</button>
+    </form>
+{% endblock %}

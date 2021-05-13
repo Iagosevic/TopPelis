@@ -2,7 +2,7 @@
 
 {% block contenido %}
 
-    <form id="Form" class="Form" method="post" action="/peliculas/edit" onsubmit="return check()">
+    <form id="Form" class="Form" method="post" action="/peliculas/edit" enctype="multipart/form-data">
         <legend>Editar pelicula {{pelicula.titulo}}</legend>
         <p><b><label for="edTitulo">Titulo</label></b>
         <input type="text" id="edTitulo" name="edTitulo" title="No puedes modificar el titulo" value="{{pelicula.titulo}}" size="20" readonly/></p>
@@ -23,6 +23,7 @@
          <p><b><label for="edPortada">Portada</label></b>
             <input type="file" name="edPortada" />
         <br><br>
+
         <input type="submit" value="Editar">
 
 

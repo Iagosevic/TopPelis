@@ -26,15 +26,20 @@
                     <td><textarea>{{pelicula.resumen}}</textarea></td>
                 </tr>
                 {% if pelicula.portada != None %}
-                <img class="bd-placeholder-img card-img-top" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}">
+                <tr>
+                    <th>Portada</th>
+                    <td><img class="portadaShowCurrent" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}"></td>
+                </tr>
                 {% else %}
-                <img class="bd-placeholder-img card-img-top" src="img/juego.jpg">
+                <tr>
+                    <th>Portada</th>
+                    <td><img class="portadaShowCurrent" src="img/juego.jpg"></td>
+                </tr>
                 {% endif %}
-
 			</table>
 
-
         </div>
+
 {% endblock %}
 </head>
 <body>
