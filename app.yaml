@@ -11,7 +11,6 @@ handlers:
 
 - url: /
   script: handlers.main.app
-  login: required
 
 - url: /peliculas/nueva
   script: handlers.peliculas.nueva.app
@@ -22,8 +21,14 @@ handlers:
 - url: /peliculas/edit
   script: handlers.peliculas.edit.app
 
+- url: /peliculas/search
+  script: handlers.peliculas.search.app
+
 - url: /peliculas/showcurrent
   script: handlers.peliculas.showcurrent.app
+
+- url: /peliculas/error
+  script: handlers.peliculas.error.app
 
 - url: /comentarios/showall
   script: handlers.comentarios.showall.app
