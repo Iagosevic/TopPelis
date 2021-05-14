@@ -26,6 +26,7 @@ class NuevaPeliculaHandler(webapp2.RequestHandler):
         if self.request.get("edPortada") != "":
             # Store the added image
             image_file = self.request.get("edPortada", None)
+
         titulo = self.request.get("edTitulo", "")
         anho = int(self.request.get("edAnho", ""))
         pais = self.request.get("edPais", "")
