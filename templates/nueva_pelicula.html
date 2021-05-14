@@ -3,32 +3,50 @@
 {% block contenido %}
 <script>
         function check(){
-            if(formNuevaPelicula.edTitulo.value.length == 0){
-                alert("Titulo a 0");
+            if(Form.edTitulo.value.trim().length  == 0 || Form.edTitulo.value.length > 50){
+                alert("El titulo debe tener una longitud entre 1 y 50");
+                return false;
+            }
+            else if(Form.edAnho.value  < 1895 || Form.edAnho.value > 2021){
+                alert("El año debe estar entre 1895 y 2021");
+                return false;
+            }
+            else if(Form.edPais.value.trim().length  == 0 || Form.edPais.value.length > 30){
+                alert("El pais debe tener una longitud entre 1 y 30");
+                return false;
+            }
+            else if(Form.edDirector.value.trim().length  == 0 || Form.edDirector.value.length > 50){
+                alert("El director debe tener una longitud entre 1 y 50");
+                return false;
+            }
+            else if(Form.edResumen.value.trim().length  == 0 || Form.edResumen.value.length > 300){
+                alert("El resumen debe tener una longitud entre 1 y 300");
+                return false;
+            }
+            else if(Form.edPortada.value.length  == 0){
+                alert("Añade una portada");
                 return false;
             }
         }
-
-    </script>
-
+</script>
 
     <form id="Form" class="Form" method="post" action="/peliculas/nueva" enctype="multipart/form-data" onsubmit="return check()">
         <legend>Añadir pelicula</legend>
         <p><b><label for="edTitulo">Titulo</label></b>
-        <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="20"/></p>
+        <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="55"/></p>
         <br><br>
         <p><b><label for="edAnho">Año</label></b>
-        <input type="number" id="edAnho" name="edAnho" min="1895" max="2021" placeholder="Ingresa el año" required /></p>
+        <input type="number" id="edAnho" name="edAnho"  placeholder="Ingresa el año"  /></p>
         <br><br>
         <p><b><label for="edPais">Pais</label></b>
-        <input type="text" id="edPais" name="edPais" placeholder="Ingresa el pais" required /></p>
+        <input type="text" id="edPais" name="edPais" placeholder="Ingresa el pais" size="35"/></p>
         <br><br>
         <p><b><label for="edDirector">Director</label></b>
-        <input type="text" id="edDirector" name="edDirector" placeholder="Ingresa el director" required /></p>
+        <input type="text" id="edDirector" name="edDirector" placeholder="Ingresa el director"  size="55"/></p>
         <br><br>
         <p><b><label for="edResumen">Resumen</label></b>
         <textarea id="edResumen" name="edResumen"
-               rows="7" cols="60" placeholder="Escribe un breve resumen" required></textarea></p>
+               rows="7" cols="60" placeholder="Escribe un breve resumen" ></textarea></p>
 
         <p><b><label for="edPortada">Portada</label></b>
             <input type="file" name="edPortada" />

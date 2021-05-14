@@ -1,11 +1,18 @@
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
-
-    <form id="Form" class="Form" method="post" action="/peliculas/search">
+<script>
+        function check(){
+            if(Form.edTitulo.value.trim().length  == 0 || Form.edTitulo.value.length > 50){
+                alert("Introduce un titulo válido (menos de 50 caracteres)");
+                return false;
+            }
+        }
+</script>
+    <form id="Form" class="Form" method="post" action="/peliculas/search" onsubmit="return check()">
         <legend>Buscar pelicula</legend>
         <p><b><label for="edTitulo">Titulo</label></b>
-        <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="20"/></p>
+        <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="55"/></p>
         <br><br>
         <button type="submit" name="action" value="Buscar" class="anadir">Buscar</button>
     </form>

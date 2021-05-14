@@ -2,8 +2,16 @@
 
 {% block contenido %}
 
+<script>
+        function check(){
+            if(Form.edComentario.value.trim().length  == 0 || Form.edComentario.value.length > 300){
+                alert("Introduce un comentario válido (menos de 300 caracteres)");
+                return false;
+            }
+        }
+</script>
 
-    <form id="Form" class="Form" method="post" action="/comentarios/add?id={{pelicula.key.urlsafe()}}">
+    <form id="Form" class="Form" method="post" action="/comentarios/add?id={{pelicula.key.urlsafe()}}" onsubmit="return check()">
         <legend>Nuevo comentario sobre {{ pelicula.titulo }}</legend>
         <p><b><label for="edComentario">Comentario</label></b>
         <textarea id="edComentario" name="edComentario"
