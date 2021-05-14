@@ -1,8 +1,0 @@
-Buscar pelicula V
-Editar la foto (solo cambia al refrescar) V [se arregla con time.sleep(1)]
-CSS
-Revisar login
-JS
-Eliminar pelicula V [se arregla con un type submit y pasando la key por el action del form]
-Añadir comentario V [se arregla con un type submit y pasando la key por el action del form]
-Mensaje de error (no existe la pelicula) V
