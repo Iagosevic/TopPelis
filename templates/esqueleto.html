@@ -1,0 +1,51 @@
+<!-- coding: utf-8 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TopPelis</title>
+	<link rel="stylesheet" href="/templates/styles.css">
+</head>
+<header id="main-header">
+
+	<div class="fixednav">
+		<div class="topnav">
+			<div class="topnav-centered">
+				<a href="/">TopPelis</a>
+			</div>
+            {% if usr %}
+                <a href="{{url_usr}}">Cerrar sesión</a>
+                <h3 style="color: white; float: right">Hola, {{usr.nickname()}}</h3>
+        </div>
+    </div>
+
+
+
+
+    <div class="menu-bar" id="menu-bar">
+		<li><a href="/peliculas/nueva">Añadir pelicula</a></li>
+		<li><a href="/peliculas/search">Buscar pelicula</a></li>
+
+
+	</div>
+
+</header>
+
+
+<body>
+
+
+   {% block contenido %}{% endblock %}
+  	 <!--Pie-->
+<div  class="footer" id="footer">
+	<li>© TopPelis</li>
+</div>
+    {% else %}
+        <a href="{{url_usr}}">¡Logueate!</a>
+    {% endif %}
+</body>
+</html>
+
+
+</body>
+</html>

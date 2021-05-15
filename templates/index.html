@@ -1,0 +1,34 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+      {% if peliculas.count() > 0 %}
+{% for i in peliculas %}
+    <div class="ContenedorPelicula">
+
+          <h1><b>{{ i.titulo }}</b> {{ i.pais }}</h1>
+          <a href="/peliculas/eliminar?id={{ i.key.urlsafe() }}">Eliminar pelicula</a> |
+          <a href="/peliculas/edit?id={{ i.key.urlsafe() }}">Editar pelicula</a> |
+          <a href="/peliculas/showcurrent?id={{ i.key.urlsafe() }}">Ver pelicula</a>
+
+            <br><br>
+          {% if i.portada != None %}
+                <img class="bd-placeholder-img card-img-top" src="data:image/png;base64,{{i.portada.encode('base64')}}">
+                {% else %}
+                <img class="bd-placeholder-img card-img-top" src="img/juego.jpg">
+                {% endif %}
+        <br><br>
+              <a href="/comentarios/showall?id={{ i.key.urlsafe() }}">Ver comentarios</a> |
+              <a href="/puntuacion/showall?id={{ i.key.urlsafe() }}">Ver puntuacion</a>
+
+          <br><br>
+    </div>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p><b>No hay peliculas todavia.</b></p>
+      {% endif %}
+
+
+
+        {% endblock %}

@@ -1,0 +1,51 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+
+<form id="FormEliminar" class="FormEliminar" method="post" action="/peliculas/eliminar?id={{pelicula.key.urlsafe()}}">
+    <table class="showU" style="margin-left: 30%;">
+        <tr><th class="title" colspan="4">Eliminar {{pelicula.titulo}}</tr>
+            <tr>
+                <th>Titulo</th>
+                <td>{{pelicula.titulo}}</td>
+            </tr>
+            <tr>
+                <th>Año</th>
+                <td>{{pelicula.anho}}</td>
+            </tr>
+            <tr>
+                <th>Pais</th>
+                <td>{{pelicula.pais}}</td>
+            </tr>
+            <tr>
+                <th>Director</th>
+                <td>{{pelicula.director}}</td>
+            </tr>
+            <tr>
+                <th>Resumen</th>
+                <td><textarea rows="7" cols="60" readonly>{{pelicula.resumen}}</textarea></td>
+            </tr>
+            {% if pelicula.portada != None %}
+            <tr>
+                <th>Portada</th>
+                <td><img class="portadaShowCurrent" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}"></td>
+            </tr>
+            {% else %}
+            <tr>
+                <th>Portada</th>
+                <td><img class="portadaShowCurrent" src="img/juego.jpg"></td>
+            </tr>
+            {% endif %}
+            <th>
+                <input type="submit" value="Eliminar">
+
+            </th>
+			</table>
+</form>
+
+{% endblock %}
+</head>
+<body>
+
+</body>
+</html>
