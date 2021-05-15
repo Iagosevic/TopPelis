@@ -7,7 +7,7 @@ from webapp2_extras.users import users
 from google.appengine.ext import ndb
 from model.comentario import Comentario
 from model.pelicula import Pelicula
-import time
+from datetime import datetime
 
 class ComentarioAddHandler(webapp2.RequestHandler):
     def get(self):
@@ -29,6 +29,8 @@ class ComentarioAddHandler(webapp2.RequestHandler):
         titulo = self.request.GET["id"]
         login = users.get_current_user().nickname()
         comentario = self.request.get("edComentario")
+        #now = datetime.now()
+        #hora = now.time()
 
         comentario = Comentario(titulo=ndb.Key(urlsafe=titulo), login=login, comentario=comentario)
         comentario.put()
