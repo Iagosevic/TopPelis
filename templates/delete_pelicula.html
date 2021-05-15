@@ -2,7 +2,7 @@
 
 {% block contenido %}
 
-<form id="FormEliminar" class="FormEliminar" method="post" action="/peliculas/eliminar?id={{pelicula.key.urlsafe()}}">
+<form style="margin-top: 0px" id="FormEliminar" class="FormEliminar" method="post" action="/peliculas/eliminar?id={{pelicula.key.urlsafe()}}">
     <table class="showU" style="margin-left: 30%;">
         <tr><th class="title" colspan="4">Eliminar {{pelicula.titulo}}</tr>
             <tr>
@@ -23,7 +23,7 @@
             </tr>
             <tr>
                 <th>Resumen</th>
-                <td><textarea readonly>{{pelicula.resumen}}</textarea></td>
+                <td><textarea rows="4" cols="40" readonly>{{pelicula.resumen}}</textarea></td>
             </tr>
             {% if pelicula.portada != None %}
             <tr>
@@ -37,7 +37,7 @@
             </tr>
             {% endif %}
             <th>
-                <input type="submit" value="Eliminar">
+                <button style="position:absolute;margin-left: 40px;" type="submit" name="action" value="Eliminar" class="eliminar">Eliminar</button>
 
             </th>
 			</table>

@@ -182,6 +182,26 @@ button {
     font-weight: bold;
 }
 
+.editar {
+    /*background-image: url(../img/aceptar.png);*/
+    background-color: #2DC700;
+    color: black;
+    font-weight: bold;
+}
+
+.eliminar {
+    /*background-image: url(../img/aceptar.png);*/
+    background-color: #E70F0F;
+    color: black;
+    font-weight: bold;
+}
+
+.buscar {
+    /*background-image: url(../img/aceptar.png);*/
+    background-color: #CC8B1F;
+    color: black;
+    font-weight: bold;
+}
 /********* Menu *********/
 
 .menu-bar {
@@ -307,4 +327,10 @@ img{
 	width:50%;
 	border-style:groove;
 	border-color:blue;
+}
+
+.FormNota{
+    width: 120px;
+    height: 130px;
+    background-color: #4682B4;
 }

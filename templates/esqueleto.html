@@ -15,8 +15,12 @@
 			</div>
             {% if usr %}
                 <a href="{{url_usr}}">Cerrar sesión</a>
+                <h3 style="color: white; float: right">Hola, {{usr.nickname()}}</h3>
         </div>
     </div>
+
+
+
 
     <div class="menu-bar" id="menu-bar">
 		<li><a href="/peliculas/nueva">Añadir pelicula</a></li>

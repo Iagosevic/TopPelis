@@ -18,7 +18,8 @@
                 <img class="bd-placeholder-img card-img-top" src="img/juego.jpg">
                 {% endif %}
         <br><br>
-              (<a href="/comentarios/showall?id={{ i.key.urlsafe() }}">Ver comentarios</a>)
+              <a href="/comentarios/showall?id={{ i.key.urlsafe() }}">Ver comentarios</a> |
+              <a href="/puntuacion/showall?id={{ i.key.urlsafe() }}">Ver puntuacion</a>
 
           <br><br>
     </div>
