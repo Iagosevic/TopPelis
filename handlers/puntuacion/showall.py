@@ -18,9 +18,14 @@ class PuntuacionShowallHandler(webapp2.RequestHandler):
                 suma += i.nota
             media = suma / puntuaciones.count()
 
-        nota_user = Puntuacion.query(Puntuacion.titulo == pelicula.key and Puntuacion.login == usuario.nickname()).get()
-        if not nota_user:
+        n = Puntuacion.query(ndb.AND
+                             (Puntuacion.titulo == tupla[0].key,
+                              Puntuacion.login == users.get_current_user().nickname())).get()
+
+        if not n:
             nota_user = -1.0
+        else:
+            nota_user = n.nota
 
         valores_plantilla = {
             "usr": usuario,
