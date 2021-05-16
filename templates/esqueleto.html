@@ -1,11 +1,14 @@
 <!-- coding: utf-8 -->
+<!-- Vista en la que se incluyen elementos comunes a todas las vistas-->
 <!DOCTYPE html>
 <html lang="es">
+<!-- Head (texto que aparece en la ventana del navegador) -->
 <head>
     <meta charset="UTF-8">
     <title>TopPelis</title>
 	<link rel="stylesheet" href="/templates/styles.css">
 </head>
+<!-- Header superior de la aplicacion -->
 <header id="main-header">
 
 	<div class="fixednav">
@@ -18,20 +21,12 @@
                 <h3 style="color: white; float: right">Hola, {{usr.nickname()}}</h3>
         </div>
     </div>
-
-
-
-
+    <!-- Header inferior -->
     <div class="menu-bar" id="menu-bar">
 		<li><a href="/peliculas/nueva">Añadir pelicula</a></li>
 		<li><a href="/peliculas/search">Buscar pelicula</a></li>
-
-
 	</div>
-
 </header>
-
-
 <body>
 
 

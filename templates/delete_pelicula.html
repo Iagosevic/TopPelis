@@ -1,8 +1,10 @@
+<!-- Vista para pedir confirmacion de borrado de una pelicula -->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
-
+<!-- Form para borrar pelicula -->
 <form style="margin-top: 0px" id="FormEliminar" class="FormEliminar" method="post" action="/peliculas/eliminar?id={{pelicula.key.urlsafe()}}">
+    <!-- Tabla en la que se muestran los datos de la pelicula -->
     <table class="showU" style="margin-left: 30%;">
         <tr><th class="title" colspan="4">Eliminar {{pelicula.titulo}}</tr>
             <tr>
@@ -37,6 +39,7 @@
             </tr>
             {% endif %}
             <th>
+                <!-- Boton para borrar -->
                 <button style="position:absolute;margin-left: 40px;" type="submit" name="action" value="Eliminar" class="eliminar">Eliminar</button>
 
             </th>

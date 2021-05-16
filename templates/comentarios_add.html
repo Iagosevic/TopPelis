@@ -1,7 +1,8 @@
+<!-- Vista para añadir un comentario -->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
-
+<!-- Script para comprobar que el campo no este vacio o supere un tamaño -->
 <script>
         function check(){
             if(Form.edComentario.value.trim().length  == 0 || Form.edComentario.value.length > 300){
@@ -10,13 +11,13 @@
             }
         }
 </script>
-
+<!-- Form para añadir un comentario -->
     <form id="Form" class="Form" method="post" action="/comentarios/add?id={{pelicula.key.urlsafe()}}" onsubmit="return check()">
         <legend>Nuevo comentario sobre {{ pelicula.titulo }}</legend>
         <p><b><label for="edComentario">Comentario</label></b>
         <textarea id="edComentario" name="edComentario"
                rows="7" cols="60" placeholder="Escribe un breve comentario"></textarea></p>
-
+        <!-- Boton para añadir el comentario -->
         <button type="submit" name="action" value="Añadir" class="anadir">Añadir</button>
     </form>
 {% endblock %}

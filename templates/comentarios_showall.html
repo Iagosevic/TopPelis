@@ -1,21 +1,23 @@
+<!-- Vista para ver todos los comentarios de una pelicula -->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
         <h1 style="text-align: center">Comentarios sobre {{ pelicula.titulo }}</h1>
         <img style="margin: auto; display: block" class="portadaShowCurrent" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}">
-
+        <!-- Si hay comentarios -->
       {% if comentarios.count() > 0 %}
       <ul>
         {% for i in comentarios %}
-
+        <!-- Muestra el usuario, fecha y hora del comentario, ademas del comentario -->
           <li>Comentario de <b>{{ i.login }}</b> el {{ i.fecha_comentario.day }}/{{ i.fecha_comentario.month }}/{{ i.fecha_comentario.year }}
               a las {{ i.hora_comentario.hour + 2}}:{{ i.hora_comentario.minute }}:{{ i.hora_comentario.second }}</li>
           <ul><b>{{ i.comentario }}</b></ul>
         {% endfor %}
       </ul>
+    <!-- Si no hay comentarios muestra el mensaje -->
       {% else %}
       <p><b>No hay comentarios todavia.</b></p>
       {% endif %}
-
+    <!-- Enlace para añadir comentario -->
     <a href="/comentarios/add?id={{ pelicula.key.urlsafe() }}">Añadir comentario</a>
 {% endblock %}
