@@ -1,9 +1,12 @@
+#Archivo para gestionar los handlers de los proyectos y las librerias usadas
+#Descripcion general
 application: proyecto
 version: 1
 runtime: python27
 api_version: 1
 threadsafe: yes
 
+#Handlers
 handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
@@ -43,6 +46,7 @@ handlers:
   static_dir: templates
   application_readable: true
 
+#Librerias
 libraries:
 - name: webapp2
   version: "2.5.2"
