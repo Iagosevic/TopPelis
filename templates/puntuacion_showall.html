@@ -1,7 +1,8 @@
+<!-- Vista para ver las puntuaciones de una pelicula y su nota media -->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
-
+<!-- Script para comprobar que se introduce una nota -->
 <script>
         function check(){
             if(Form.edNota.value == ""){
@@ -11,20 +12,22 @@
         }
 </script>
  <ul>
+     <!-- Portada y nota media de la pelicula a puntuar -->
         <h1 style="text-align: center">Puntuaciones sobre {{ pelicula.titulo }}</h1>
           <img style="margin: auto; display: block" class="portadaShowCurrent" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}">
         <h2 style="margin: auto; display: block; text-align: center; padding-top: 15px;"> Nota media {{media}}</h2>
           {% for i in puntuaciones %}
-
+        <!-- Puntuacion de cada usuario -->
           <li>Puntuacion de <b>{{ i.login }}</b></li>
           <ul><b>{{ i.nota }}</b></ul>
         {% endfor %}
       </ul>
       {% if puntuaciones.count() > 0 %}
       {% else %}
+    <!-- Si no hay puntuaciones todavia -->
       <p><b>No hay puntuacion todavia.</b></p>
       {% endif %}
-
+<!-- Form para introducir una nota -->
 <form id="Form" class="FormNota" method="post" action="/puntuacion/showall?id={{pelicula.key.urlsafe()}}" onsubmit="return check()">
     <div name="">
     <label style="text-align: center; font-size: 30px" for="edNota"><b>Tu voto</b></label>
@@ -44,6 +47,7 @@
             <option value="10.0" {% if nota_user == 10.0 %} selected {% endif %}>10</option>
         </select>
     <br><br>
+        <!-- Boton para confirmar-->
         <input style="margin-left: 30%;" type="submit" value="Puntuar">
         </div>
     </form>

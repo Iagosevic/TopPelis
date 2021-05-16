@@ -1,9 +1,11 @@
+<!--Vista para mostrar todas las peliculas-->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
-
+<!--Si hay peliculas-->
       {% if peliculas.count() > 0 %}
 {% for i in peliculas %}
+    <!--Div para mostrar la portada y otros datos de la pelicula. Ademas de los botones para editar,eliminar,ver...-->
     <div class="ContenedorPelicula">
 
           <h1><b>{{ i.titulo }}</b> {{ i.pais }}</h1>
@@ -26,9 +28,7 @@
         {% endfor %}
       </ul>
       {% else %}
+        <!--Si no hay peliculas muestra este mensaje-->
       <p><b>No hay peliculas todavia.</b></p>
       {% endif %}
-
-
-
         {% endblock %}

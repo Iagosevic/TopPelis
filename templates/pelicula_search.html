@@ -1,6 +1,8 @@
+<!-- Vista para buscar una pelicula -->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
+<!-- Script para comprobar que el titulo no este vacio o sea mayor a 50 -->
 <script>
         function check(){
             if(Form.edTitulo.value.trim().length  == 0 || Form.edTitulo.value.length > 50){
@@ -9,11 +11,13 @@
             }
         }
 </script>
+<!-- Form para buscar pelicula -->
     <form id="Form" class="Form" method="post" action="/peliculas/search" onsubmit="return check()">
         <legend>Buscar pelicula</legend>
         <p><b><label for="edTitulo">Titulo</label></b>
         <input type="text" id="edTitulo" name="edTitulo" placeholder="Ingresa el titulo" size="55"/></p>
         <br><br>
+        <!-- Boton para buscar -->
         <button type="submit" name="action" value="Buscar" class="buscar">Buscar</button>
     </form>
 {% endblock %}

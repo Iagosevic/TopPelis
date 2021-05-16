@@ -1,6 +1,8 @@
+<!--Vista para editar una pelicula-->
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
+<!-- Script para comprobar que ningun campo este vacio o supere un tamaño determinado -->
 <script>
         function check(){
             if(Form.edTitulo.value.trim().length  == 0 || Form.edTitulo.value.length > 50){
@@ -25,10 +27,11 @@
             }
         }
 </script>
-
+<!-- Form para editar pelicula -->
     <form id="Form" class="Form" method="post" action="/peliculas/edit" enctype="multipart/form-data" onsubmit="return check()">
         <legend>Editar pelicula {{pelicula.titulo}}</legend>
         <p><b><label for="edTitulo">Titulo</label></b>
+            <!-- El titulo no se puede editar al ser la "clave" -->
         <input type="text" id="edTitulo"  size="55" name="edTitulo" title="No puedes modificar el titulo" value="{{pelicula.titulo}}" size="20" readonly/></p>
         <br><br>
         <p><b><label for="edAnho">Año</label></b>
@@ -47,7 +50,7 @@
          <p><b><label for="edPortada">Portada</label></b>
             <input type="file" name="edPortada" />
         <br><br>
-
+        <!-- Boton para editar-->
         <button type="submit" name="action" value="Editar" class="editar">Editar</button>
 
 
