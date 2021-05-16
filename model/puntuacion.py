@@ -1,14 +1,20 @@
-#Puntuacion que un usuario da a una pelicula
+# coding: utf-8
+# Puntuacion de un usuario sobre una pelicula
 
+#Librerias importadas
 from google.appengine.ext import ndb
 from pelicula import Pelicula
 
+#Clase puntuacion
 class Puntuacion(ndb.Model):
-
+    # Titulo de la pelicula
     titulo = ndb.KeyProperty(kind = Pelicula)
+    # Usuario que realiza la puntuacion
     login = ndb.StringProperty(required=True)
+    #Nota de la pelicula
     nota = ndb.FloatProperty(required=True)
 
+    # Metodo para recuperar la key de la pelicula desde una url
     @staticmethod
     def recupera_para(req):
         try:
@@ -18,7 +24,6 @@ class Puntuacion(ndb.Model):
 
         if id:
             titulo = ndb.Key(urlsafe=id)
-            #pelicula = Pelicula.query(Pelicula.titulo == titulo)
             puntuaciones = Puntuacion.query(Puntuacion.titulo == titulo)
             return titulo.get(), puntuaciones
         else:
