@@ -6,6 +6,7 @@
         <img style="margin: auto; display: block" class="portadaShowCurrent" src="data:image/png;base64,{{pelicula.portada.encode('base64')}}">
         <!-- Si hay comentarios -->
       {% if comentarios.count() > 0 %}
+
       <ul>
         {% for i in comentarios %}
         <!-- Muestra el usuario, fecha y hora del comentario, ademas del comentario -->
@@ -19,5 +20,7 @@
       <p><b>No hay comentarios todavia.</b></p>
       {% endif %}
     <!-- Enlace para añadir comentario -->
-    <a href="/comentarios/add?id={{ pelicula.key.urlsafe() }}">Añadir comentario</a>
+<div class="divComentarios">
+    <a class="addComentario" href="/comentarios/add?id={{ pelicula.key.urlsafe() }}">Añadir comentario</a>
+        </div>
 {% endblock %}

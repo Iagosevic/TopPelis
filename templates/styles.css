@@ -195,6 +195,19 @@ button {
     color: black;
     font-weight: bold;
 }
+
+.addComentario{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(76, 116, 175);
+    width: 20%;
+}
+
+.divComentarios{
+  text-align: center;
+  margin-left: 10px;
+  padding: 10px 10px 10px 10px;
+}
 /********* Menu *********/
 
 .menu-bar {
