@@ -2,38 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f68e6ba-4a49-441a-9f55-67a7ba7e0718" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/comentarios/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/comentarios/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/comentarios/add.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/comentarios/add.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/comentarios/showall.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/comentarios/showall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/eliminar.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/eliminar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/error.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/nueva.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/nueva.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/peliculas/showcurrent.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/peliculas/showcurrent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/puntuacion/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/puntuacion/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/puntuacion/add.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/puntuacion/showall.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/puntuacion/showall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/comentario.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/comentario.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/pelicula.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/pelicula.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/puntuacion.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/puntuacion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Error.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comentarios_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/comentarios_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/comentarios_showall.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/comentarios_showall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete_pelicula.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete_pelicula.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/esqueleto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/esqueleto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nueva_pelicula.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nueva_pelicula.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pelicula_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pelicula_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pelicula_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pelicula_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pelicula_showcurrent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pelicula_showcurrent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/puntuacion_showall.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/puntuacion_showall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Proyecto.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/libraries/Google_App_Engine_SDK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/comentarios/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/comentarios/add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/comentarios/showall.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/edit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/eliminar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/error.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/nueva.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/peliculas/showcurrent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/puntuacion/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/puntuacion/add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handlers/puntuacion/showall.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/comentario.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/pelicula.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/puntuacion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/Error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/comentarios_add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/comentarios_showall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/delete_pelicula.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/esqueleto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/El_se_or_de_las_moscas-239836723-large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/aceptar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/esdla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/fondo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/juego.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/lalaland.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/img/titanic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/nueva_pelicula.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/pelicula_edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/pelicula_search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/pelicula_showcurrent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/puntuacion_showall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../templates/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +64,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1rlC6PBwCh5zCTJ2Wb2L4m4JIRc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -62,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Clases/4º/ALS/TCGolay" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -138,6 +153,13 @@
       <workItem from="1621241332791" duration="24000" />
       <workItem from="1621244828883" duration="1133000" />
       <workItem from="1621444988570" duration="58000" />
+      <workItem from="1621502481993" duration="1450000" />
+      <workItem from="1621507342251" duration="2073000" />
+      <workItem from="1621526407349" duration="18000" />
+      <workItem from="1621531952809" duration="244000" />
+      <workItem from="1621541898095" duration="28000" />
+      <workItem from="1621611980201" duration="474000" />
+      <workItem from="1621613590355" duration="166000" />
     </task>
     <task id="LOCAL-00001" summary="Subida 1º version">
       <created>1621080873946</created>
@@ -164,6 +186,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Subida 1º version" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Proyecto$Proyecto.coverage" NAME="Proyecto Coverage Results" MODIFIED="1621244829078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Proyecto$Proyecto.coverage" NAME="Proyecto Coverage Results" MODIFIED="1621541902136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/src$Proyecto.coverage" NAME="Proyecto Coverage Results" MODIFIED="1621613592293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
